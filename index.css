@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+#app {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#app > h2 {
+    color: red;
+}
+
+main {
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    width: 500px;
+}
+
+section {
+    width: 350px;
+    height: 350px;
+    border: 3px solid white;
+    box-shadow: 0 0 5px black;
+    border-radius: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    gap: 3px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    outline: none;
+}
+
+#start {
+    background: lightblue;
+    height: 3em;
+}
+
+.red {
+    background-color: darkred;
+}
+
+.red.active {
+    background-color: red;
+}
+
+.yellow {
+    background-color: #ab3;
+}
+
+.yellow.active {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: darkblue;
+}
+
+.blue.active {
+    background-color: blue;
+}
+
+.green {
+    background-color: darkgreen;
+}
+
+.green.active {
+    background-color: lightgreen;
+}

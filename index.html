@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>VueJS Simon Says</title>
+</head>
+<body>
+    <div id="app">
+    <h1>Simon Says</h1>
+    <h2>{{message}}</h2>
+    <main>
+        <section>
+            <button v-for="button in buttons" :class="button" @click="clicked(button)" :disabled="sequenceOn"></button>
+        </section>
+        <aside>
+            <h2>Round: {{rounds.length}}</h2>
+            <button id="start" @click="start" :disabled="gameOn">Старт</button>
+            <h2>Настройки</h2>
+            <label><input type="radio" value="1500" name="mode" v-model="mode" :disabled="gameOn">Лёгкий</label>
+            <label><input type="radio" value="1000" name="mode" v-model="mode" :disabled="gameOn">Средний</label>
+            <label><input type="radio" value="400" name="mode" v-model="mode" :disabled="gameOn">Сложный</label>
+            <button @click="stop">Стоп/Сброс</button>
+        </aside>
+    </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
